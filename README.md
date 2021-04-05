@@ -5,7 +5,7 @@ This module converts JSON files containing notification data from an old format 
 ## Installation
 
 1. Download the ZIP file
-2. Open terminal and navigate to this directory: `cd Downloads/SpanChallenge`
+2. Open terminal and navigate to this directory: `cd Downloads/SpanChallenge-master`
 3. Install using setup.py: `python setup.py install`
 
 ## Usage
