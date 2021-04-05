@@ -5,7 +5,7 @@ This module converts JSON files containing notification data from an old format 
 ## Installation
 
 1. Download the ZIP file
-2. Download the dateutil depdendency: `pip install python-dateutil`
+2. Download the dateutil dependency: `pip install python-dateutil`
 3. Open terminal and navigate to this directory: `cd Downloads/SpanChallenge-master`
 4. Install using setup.py: `python setup.py install`
 
