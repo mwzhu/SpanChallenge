@@ -34,9 +34,8 @@ def legacy_notification_port(old_notifications):
 def deduplicating(duplicate_notifications):
     no_duplicates = []
 
-    sorted_notifications = sorted(duplicate_notifications, key = lambda x: x["deduplication_id"])
     sorted_notifications = sorted(sorted_notifications, key = lambda x: x["priority"], reverse=True)
-    sorted_notifications = sorted(sorted_notifications, key = lambda x: x["timestamp"])
+    sorted_notifications = sorted(sorted_notifications, key = lambda x: x["timestamp"], reverse=True)
 
     seen_deduplication_id = []
     for notification in duplicate_notifications:
