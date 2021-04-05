@@ -2,7 +2,6 @@
 
 import unittest
 from functions import *
-from main import *
 
 class Tests(unittest.TestCase):
     def test_part1(self):
@@ -40,7 +39,7 @@ class Tests(unittest.TestCase):
             "msg": "Title: Lorem ipsum",
             "deduplication_id": "338733350510bc9b"
           }]
-          new = [
+        new = [
              {
                 "timestamp":1616200668100,
                 "priority":2,
@@ -76,7 +75,7 @@ class Tests(unittest.TestCase):
                 "title":"Title",
                 "deduplication_id":"338733350510bc9b"
              }]
-             self.assertEqual(new, legacy_notification_port(old))
+        self.assertEqual(new, legacy_notification_port(old))
 
     def test_part2(self):
         '''
@@ -118,7 +117,7 @@ class Tests(unittest.TestCase):
             "title":"Title",
             "deduplication_id":"338733350510bc9b"
          }]
-         new = [
+        new = [
           {
              "timestamp":1616200668100,
              "priority":2,
@@ -140,7 +139,7 @@ class Tests(unittest.TestCase):
              "title":"Title",
              "deduplication_id":"338733350510bc9b"
           }]
-          self.assertEqual(new, deduplicating(old))
+        self.assertEqual(new, deduplicating(old))
 
     def test_part3(self):
         '''
@@ -190,14 +189,14 @@ class Tests(unittest.TestCase):
               "body":"Lorem ipsum",
               "title":"Title",
               "deduplication_id":"338733350510bc9b"
-           }
-          {
-             "timestamp":1616200668100,
-             "priority":2,
-             "body":"Lorem ipsum",
-             "title":"Title",
-             "deduplication_id":"d7ab10a2f69d9b74"
-          },
+           },
+           {
+              "timestamp":1616200668100,
+              "priority":2,
+              "body":"Lorem ipsum",
+              "title":"Title",
+              "deduplication_id":"d7ab10a2f69d9b74"
+           },
            {
               "timestamp":1616200668100,
               "priority":0,
@@ -224,5 +223,5 @@ class Tests(unittest.TestCase):
 
 
 
-if __name == '__main__':
+if __name__ == '__main__':
     unittest.main()
