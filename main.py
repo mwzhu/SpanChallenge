@@ -9,12 +9,12 @@ def main(old_file):
         json_object = json.load(read_file)
 
     new_json_object = legacy_notification_port(json_object)
-    # deduplicated_json_object = deduplicating(new_json_object)
-    # sorted_json_object = sorting(deduplicated_json_object)
+    deduplicated_json_object = deduplicating(new_json_object)
+    sorted_json_object = sorting(deduplicated_json_object)
 
     new_file = "new_" + old_file
     with open("new_files/" + new_file, "w") as outfile:
-        json.dump(new_json_object, outfile)
+        json.dump(sorted_json_object, outfile)
 
 file_name = sys.argv[1]
 main(file_name)
